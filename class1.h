@@ -4,7 +4,6 @@
 #include <TObject.h>
 // some new code in here soon
 
-#endif //__CLASS1_H__
 
  class class1 : public TObject {
     public:
@@ -18,3 +17,5 @@
  ClassDef(class1, 1); // your_class
  
  };
+
+#endif //__CLASS1_H__
