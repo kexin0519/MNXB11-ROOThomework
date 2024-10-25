@@ -10,7 +10,7 @@ class class1 : public TObject {
     virtual ~class1(); 
 
     private:
-    //some private members
+    Int_t fVariable; //some private members
 
     ClassDef(class1,1);
 };
