@@ -1,22 +1,22 @@
-#ifndef __CLASS1_H__
-#define __CLASS1_H__
+#include "class1.h"
+#include <cmath>
 
-#include <TObject.h>
-// some new code in here soon
+class1::class1() : radius(0.0) {}    //default constructor- ROOT needs the default one where everything is set to 0
 
-ClassDef(class1, 1);
+class1::class1(double r) : radius(r) {}
+
+class1::~class1() {}
+
+double class1::calculateVolume() const {    //calculated the volume
+    return (4.0 / 3.0) * M_PI * std::pow(radius, 3);
+}
+
+void class1::setRadius(double r) {
+    radius = r;
+}
+
+double class1::getRadius() const {
+    return radius;
+}
+
 ClassImp(class1)
-
- // default constructor- ROOT needs the default one where everything is set to 0
- class1::class1() : fVariable(0)// initialize all members to null
- {
- }
- // another constructor
- class1::class1(Int_t variable) : fVariable(variable) {
-
- } 
- // destructor
- class1::~class1(){
- // right now I’m empty
- }
-#endif //__CLASS1_H__
