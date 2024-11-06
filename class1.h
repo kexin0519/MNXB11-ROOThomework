@@ -1,18 +1,22 @@
-#ifndef __CLASS1_H__
-#define __CLASS1_H__
+#ifndef CLASS1_H
+#define CLASS1_H
 
 #include <TObject.h>
 
 class class1 : public TObject {
-    public:
-    class1(); //default constructor
-    class1(Int_t variable); //some other constructor
-    virtual ~class1(); 
+public:
+    class1();    //default constructor
+    class1(double radius);    //Constructor
+    virtual ~class1();
 
-    private:
-    Int_t fVariable; //some private members
+    double calculateVolume() const;    //calculate the volume of the sphere
+    void setRadius(double r);    //set the radius
+    double getRadius() const;    //get the radius
 
-    ClassDef(class1,1);
+private:
+    double radius;
+
+    ClassDef(class1, 1);
 };
 
-#endif //__CLASS1_H__
+#endif // CLASS1_H
